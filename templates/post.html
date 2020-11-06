@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block titulo %}
+  {{ detail_post.titulo }}
+{% endblock titulo %}
+
+{% block imagen %}
+  {{ detail_post.imagen }}
+{% endblock imagen %}
+
+{% block titulo_principal %}
+  <h1>{{ detail_post.titulo }}</h1>
+{% endblock titulo_principal %}
+
+{% block subtitulo %}
+  <p>{{ detail_post.descripcion }}</p>
+  <p>Escrito por: <b>{{ detail_post.autor }}</b></p>
+{% endblock subtitulo %}
+
+{% block cuerpo %}
+{{ detail_post.contenido | safe}}
+{% endblock cuerpo %}
+
+{% block barra_busqueda %}
+{% endblock barra_busqueda %}
